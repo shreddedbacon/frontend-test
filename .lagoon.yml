@@ -10,3 +10,12 @@ environments:
               - toService: backend
                 path: /cms
 
+routes:
+  autogenerate:
+    pathRoutes:
+      - fromService: nginx
+        toService: backend
+        path: /api
+      - fromService: nginx
+        toService: backend
+        path: /cms
