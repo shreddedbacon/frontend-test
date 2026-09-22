@@ -1,0 +1,16 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      lagoon.type: nginx
+    ports:
+      - "8080:8080"
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      lagoon.type: external
+      lagoon.external.service: '{"name":"nginx","project":"backend-test","environment":"main"}'
