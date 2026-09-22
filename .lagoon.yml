@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 environments:
-  real-ip-test:
+  main:
     routes:
       - nginx:
         - "frontend-test.test6.shreddedbacon.com":
