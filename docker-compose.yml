@@ -10,7 +10,8 @@ services:
   backend:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: backend.Dockerfile
     labels:
-      lagoon.type: external
-      lagoon.external.service: '{"name":"nginx","project":"backend-test","environment":"main"}'
+      lagoon.type: nginx
+    ports:
+      - "8080:8080"
